@@ -45,6 +45,8 @@ conn = Plugin(
 gauge = conn.Gauge("gague_name")
 gauge.
 
+```
+
 
 
 
@@ -58,3 +60,10 @@ gauge.
 - https://github.com/astro/collectd/blob/master/contrib/collectd-unixsock.py
 - https://github.com/astro/collectd/blob/master/contrib/collectd-network.py
 - https://github.com/appliedsec/collectd
+- https://github.com/appliedsec/collectd/blob/3861996acde1edc2fb3335fbb61e2569a1aa2dc4/collectd.py
+- https://docs.python.org/3/howto/sockets.html#socket-howto
+- https://collectd.org/wiki/index.php/Plain_text_protocol
+- https://collectd.org/wiki/index.php/Networking_introduction
+- https://pythonhosted.org/collectd/
+- https://collectd.org/documentation/manpages/collectd.conf.5.shtml
+- 
