@@ -3,7 +3,7 @@ import time
 from . import CollectDClient
 
 try:
-    from cStringIO import StringIO
+    from io import StringIO
 except ImportError:
     from StringIO import StringIO
 
