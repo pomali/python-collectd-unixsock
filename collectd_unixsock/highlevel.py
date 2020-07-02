@@ -74,4 +74,4 @@ class Widget():
 
     def put_val(self, value):
         timestamp = time.time()
-        self._plugin._connector.put_val(self.identifier, [(timestamp, value)])
+        self._plugin._connector.put_val(self.identifier, [value], timestamp)

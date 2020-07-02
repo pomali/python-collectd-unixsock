@@ -13,13 +13,12 @@ class CollectDClient():
     def get_val(self, identifier):
         return self._send('GETVAL {}'.format(identifier))
 
-    def put_val(self, identifier, values, options={}):
+    def put_val(self, identifier, values, timestamp=None, options={}):
         optlist = ''
         for k, v in options:
             optlist += "{}={}".format(k, v)
-        vallist = ':'.join(
-                ["{}:{}".format(timestamp, value)
-                    for timestamp, value in values])
+
+        vallist = '{}:'.format(timestamp if timestamp is not None else 'N') + ':'.join(values)
         return self._send(
                 'PUTVAL {} {} {}'.format(
                     identifier,
