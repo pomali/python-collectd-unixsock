@@ -18,7 +18,7 @@ class CollectDClient():
         for k, v in options:
             optlist += "{}={}".format(k, v)
 
-        vallist = '{}:'.format(timestamp if timestamp is not None else 'N') + ':'.join(values)
+        vallist = '{}:'.format(timestamp if timestamp is not None else 'N') + ':'.join([str(v) for v in values])
         return self._send(
                 'PUTVAL {} {} {}'.format(
                     identifier,
